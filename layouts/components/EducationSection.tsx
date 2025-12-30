@@ -21,7 +21,7 @@ const EDUCATION = [
 export default function EducationSection() {
   return (
     <section className="mt-8 sm:mt-12">
-      <h2 className="mb-4 sm:mb-6 text-lg sm:text-xl font-bold">Education</h2>
+      <h2 className="mb-2 sm:mb-4 text-lg sm:text-xl font-bold">Education</h2>
       <div className="flex flex-col gap-4 sm:gap-6">
         {EDUCATION.map((edu, index) => (
           <div key={index} className="flex items-start sm:items-center justify-between gap-3">

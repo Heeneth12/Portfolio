@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans text-zinc-900 dark:bg-black dark:text-zinc-50">
-      <main className="flex min-h-screen w-full max-w-2xl flex-col py-12 px-8 sm:py-24 sm:px-8">
+      <main className="flex min-h-screen w-full max-w-2xl flex-col py-12 px-8 sm:py-18 sm:px-4">
         <Header />
         <AboutSection />
         <WorkExperienceSection />

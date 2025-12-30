@@ -5,7 +5,6 @@ export default function AboutSection() {
 
       <div
         className="
-          mt-2
           text-zinc-600 dark:text-zinc-400
           text-xs sm:text-base
           font-semibold

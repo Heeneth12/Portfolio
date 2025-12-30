@@ -38,18 +38,6 @@ const Icons = {
       />
     </svg>
   ),
-  youtube: (props: IconProps) => (
-    <svg
-      width="32px"
-      height="32px"
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}>
-      <title>youtube</title>
-      <path d="M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z" />
-    </svg>
-  ),
   github: (props: IconProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
@@ -89,17 +77,23 @@ const DATA = {
     },
   },
 };
+
 export function PortfolioDock() {
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
   if (!mounted) return null;
 
   return (
     <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
       <TooltipProvider>
-        <Dock direction="middle">
+        <Dock 
+          direction="middle" 
+          className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl rounded-full"
+        >
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -109,9 +103,10 @@ export function PortfolioDock() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
-                    )}>
-                    <item.icon className="size-4" />
+                      "size-12 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                    )}
+                  >
+                    <item.icon className="size-4 text-zinc-600 dark:text-zinc-400" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -121,7 +116,7 @@ export function PortfolioDock() {
             </DockIcon>
           ))}
 
-          <Separator orientation="vertical" className="h-full" />
+          <Separator orientation="vertical" className="h-6 self-center bg-zinc-200 dark:bg-zinc-800" />
 
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
@@ -132,9 +127,10 @@ export function PortfolioDock() {
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
-                    )}>
-                    <social.icon className="size-4" />
+                      "size-12 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                    )}
+                  >
+                    <social.icon className="size-4 text-zinc-600 dark:text-zinc-400" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
