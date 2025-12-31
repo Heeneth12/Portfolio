@@ -50,18 +50,18 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "https://medium.com/@dev_heeneth", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/Heeneth12",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/atturu-venkat-heeneth-sai/",
         icon: Icons.linkedin,
       },
       X: {
@@ -71,7 +71,7 @@ const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+         url: "mailto:heeneth123@gmail.com?subject=Hello%20Heeneth&body=Hi%20Heeneth,",
         icon: Icons.email,
       },
     },

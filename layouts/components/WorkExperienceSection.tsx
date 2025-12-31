@@ -13,8 +13,13 @@ const WORK_EXPERIENCE = [
     date: "Jan 2024 – Present",
     logo: AG,
     color: "bg-indigo-600",
-    description:
-      "Led development of patient management system using React and Node.js. Implemented real-time appointment scheduling features and integrated electronic health records. Optimized database queries reducing load times by 40%.",
+    description: `
+      Engineered a Progressive Web Application (PWA) for managing patient reports, improving mobile accessibility and reducing retrieval time by 40% for 500+ healthcare professionals.
+      Migrated legacy systems to Java Spring boot and Angular , streamlining the codebase and reducing maintenance costs by 60%.
+      Implemented role-based access control (RBAC) using Spring Security.
+      Developed and optimized RESTful microservices using Spring Boot, leveraging JPA (Hibernate ORM) and Java Streams API to improve data processing efficiency across 12 services.
+      Implemented Angular lazy-loaded modules, Auth Guards, and ngx-permissions to enforce role-based authorization and optimize application performance.
+    `,
   },
   {
     company: "BridgeLabz",
@@ -22,8 +27,11 @@ const WORK_EXPERIENCE = [
     date: "Nov 2023 – Jan 2024",
     logo: BG,
     color: "bg-green-500",
-    description:
-      "Developed RESTful APIs using Express.js and MongoDB. Collaborated with cross-functional teams to deliver features on time. Participated in code reviews and implemented best practices for clean code.",
+    description: `
+    Assisted in developing REST-based microservices using Spring Boot, applying JPA (Hibernate ORM), Java Collections, and Streams API to improve code efficiency.
+    Built Single Page Applications (SPAs) with Angular, using Angular Router, Injectable Services, and Redux for asynchronous state management and improved UI responsiveness.
+    Implemented Spring Security with CORS configuration and integrated Java Mail Service to support secure access and user notifications.
+    `,
   },
 ];
 
@@ -96,7 +104,7 @@ export default function WorkExperienceSection() {
                    Desktop: pl-20 (pushes text past larger logo)
                 */}
                 <div className="px-3 pb-4 pt-1 sm:pl-20 sm:pr-12 pl-[3.25rem]">
-                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 whitespace-pre-line">
                     {exp.description}
                   </p>
                 </div>
